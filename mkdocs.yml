@@ -18,7 +18,9 @@ markdown_extensions:
 plugins:
   - search
   # Enable https://github.com/fralau/mkdocs_macros_plugin
-  - macros   
+  - macros:
+      include_yaml:
+        - _yaml/simple-example.yml
 extra:
   extraValueOne: 1
   extraValueTwo: two
@@ -31,5 +33,5 @@ nav:
  - YAML sources:
     - Frontmatter: frontmatter.md
     - MkDocs file: mkdocs-file.md
-    - Extra YAML files: extra-yaml-files.md
+    - External YAML files: external-yaml-files.md
     

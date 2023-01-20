@@ -2,6 +2,8 @@
 
 _An example site to demo using [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) with YAML to generate content._
 
+[Browse the examples](https://starfallprojects.github.io/mkdocs-macros-yaml-examples/)
+
 mkdocs-macros-plugin allows you to use variables and macros in your MkDocs sites. It's a powerful tool, and I recommend reading the [mkdocs-macros documentation](https://mkdocs-macros-plugin.readthedocs.io/en/latest/) to learn more about it.
 
 This repo focuses on one task: using YAML to define variables that you can then use in your site. This can range from pulling in something from your `mkdocs.yml` and displaying it in your content, to using extra YAML files to generate page contents.
