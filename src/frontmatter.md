@@ -14,6 +14,11 @@ tags:
 
 [Relevant plugin docs]({{ docsLink }})
 
+List of tags:
+{% for tag in tags %}
+* {{ tag }}
+{% endfor %}
+
 ## Use frontmatter variables in your Markdown
 
 This page has the following frontmatter:
@@ -37,5 +42,10 @@ It then uses that frontmatter to create the title and introduction:
 {{ description }}
 
 [Relevant plugin docs]({{ docsLink }})
+
+List of tags:
+{% for tag in tags %}
+* {{ tag }}
+{% endfor %}
 ```
 {% endraw %}

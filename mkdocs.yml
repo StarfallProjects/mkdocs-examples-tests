@@ -33,5 +33,5 @@ nav:
  - YAML sources:
     - Frontmatter: frontmatter.md
     - MkDocs file: mkdocs-file.md
-    - External YAML files: external-yaml-files.md
+    - External YAML files: external-yaml-files.md 
     

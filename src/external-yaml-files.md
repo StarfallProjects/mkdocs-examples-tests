@@ -6,7 +6,6 @@ Including external YAML files is where this feature becomes really powerful:
 * Creates the possibility of single-sourcing content: for example, you could have a YAML file containing help text that you then display both in-app and in your docs.
 * And intriguing possibilities for rendering OpenAPI spec files . . . 
 
-
 The plugin docs have more information on [Including external yaml files](https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files).
 
 ## Example: Include a YAML file from your project
@@ -36,3 +35,6 @@ simpleYamlTwo: two
 * Simple YAML 1: {{ simpleYamlOne }}
 * Simple YAML 2: {{ simpleYamlTwo }}
 
+## Example: Include a YAML file from an external URL
+
+Wouldn't it be cool to be able to pull in a YAML file from outside the project? Yes. Can you do it? No / not easily (I'm exploring using [modules](https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/) for it).

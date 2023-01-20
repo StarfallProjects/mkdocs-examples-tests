@@ -21,7 +21,7 @@
     
     
       
-        <title>Extra YAML files - MkDocs Macros YAML Examples</title>
+        <title>External YAML files - MkDocs Macros YAML Examples</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extra-yaml-files" class="md-skip">
+        <a href="#external-yaml-files" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Extra YAML files
+              External YAML files
             
           </span>
         </div>
@@ -350,9 +350,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          External YAML files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Extra YAML files
+        External YAML files
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-include-a-yaml-file-from-your-project" class="md-nav__link">
+    Example: Include a YAML file from your project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-include-a-yaml-file-from-an-external-url" class="md-nav__link">
+    Example: Include a YAML file from an external URL
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -385,6 +423,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-include-a-yaml-file-from-your-project" class="md-nav__link">
+    Example: Include a YAML file from your project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-include-a-yaml-file-from-an-external-url" class="md-nav__link">
+    Example: Include a YAML file from an external URL
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -399,7 +459,37 @@
 
 
 
-<h1 id="extra-yaml-files">Extra YAML files</h1>
+<h1 id="external-yaml-files">External YAML files</h1>
+<p>Including external YAML files is where this feature becomes really powerful:</p>
+<ul>
+<li>Allows you to create large YAML sources, without cluttering up your <code>mkdocs.yml</code>.</li>
+<li>Creates the possibility of single-sourcing content: for example, you could have a YAML file containing help text that you then display both in-app and in your docs.</li>
+<li>And intriguing possibilities for rendering OpenAPI spec files . . . </li>
+</ul>
+<p>The plugin docs have more information on <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files">Including external yaml files</a>.</p>
+<h2 id="example-include-a-yaml-file-from-your-project">Example: Include a YAML file from your project</h2>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># In mkdocs.yml</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">include_yaml</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_yaml/simple-example.yml</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># In _yaml/simple-example.yml</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">simpleYamlOne</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">simpleYamlTwo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">two</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># In your Markdown</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">* Simple YAML 1</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="w"> </span><span class="nv">simpleYamlOne</span><span class="w"> </span><span class="p p-Indicator">}}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">* Simple YAML 2</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="w"> </span><span class="nv">simpleYamlTwo</span><span class="w"> </span><span class="p p-Indicator">}}</span>
+</code></pre></div>
+<p><strong>Output:</strong></p>
+<ul>
+<li>Simple YAML 1: 1</li>
+<li>Simple YAML 2: two</li>
+</ul>
+<h2 id="example-include-a-yaml-file-from-an-external-url">Example: Include a YAML file from an external URL</h2>
+<p>Wouldn't it be cool to be able to pull in a YAML file from outside the project? Yes. Can you do it? No / not easily (I'm exploring using <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/">modules</a> for it).</p>
 
 
 
