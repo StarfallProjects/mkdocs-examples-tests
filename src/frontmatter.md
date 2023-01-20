@@ -19,7 +19,7 @@ List of tags:
 * {{ tag }}
 {% endfor %}
 
-## Use frontmatter variables in your Markdown
+## Example: Use frontmatter variables in your Markdown
 
 This page has the following frontmatter:
 

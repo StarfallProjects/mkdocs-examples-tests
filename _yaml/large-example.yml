@@ -1,0 +1,10 @@
+fruits:
+  - name:  apple
+    color: green
+    sweetness: 4/10
+  - name: orange
+    color: orange
+    sweetness: 6/10
+  - name: melon
+    color: yellow
+    sweetness: 8/10

@@ -2,15 +2,11 @@
 
 mkdocs-macros-plugin automatically has access to everything in your `mkdocs.yml` file.
 
-## Built-in variables
+## Example: Access your MkDocs configuration using `config`
 
-mkdocs-macros-plugin comes with [seven built-in objects](https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#batteries-included-defaut-objects).
+mkdocs-macros-plugin comes with [seven built-in objects](https://mkdocs-macros-plugin.readthedocs.io/en/latest/pages/#batteries-included-defaut-objects). `config` contains the MkDocs configuration. 
 
-### Example: Access your MkDocs configuration using `config`
-
-`config` contains the MkDocs configuration. 
-
-**Code:**
+### Code
 
 {% raw %}
 ```yaml
@@ -22,7 +18,7 @@ site_name: MkDocs Macros YAML Examples
 ```
 {% endraw %}
 
-**Output:**
+### Output
 
 {{ config.site_name }}
 
@@ -30,7 +26,7 @@ site_name: MkDocs Macros YAML Examples
 
 You can make custom variables available using the `extra` object in your `mkdocs.yml`.
 
-**Code:**
+### Code
 
 {% raw %}
 ```yaml
@@ -45,7 +41,7 @@ extra:
 ```
 {% endraw %}
 
-**Output:** 
+### Output 
 
 * Value 1: {{ extraValueOne }}
 * Value 2: {{ extraValueTwo }}

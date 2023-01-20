@@ -10,7 +10,7 @@ The plugin docs have more information on [Including external yaml files](https:/
 
 ## Example: Include a YAML file from your project
 
-**Code:**
+### Code
 
 {% raw %}
 ```yaml
@@ -30,7 +30,7 @@ simpleYamlTwo: two
 ```
 {% endraw %}
 
-**Output:**
+### Output
 
 * Simple YAML 1: {{ simpleYamlOne }}
 * Simple YAML 2: {{ simpleYamlTwo }}

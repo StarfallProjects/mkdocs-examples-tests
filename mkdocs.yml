@@ -21,6 +21,9 @@ plugins:
   - macros:
       include_yaml:
         - _yaml/simple-example.yml
+        - _yaml/large-example.yml
+extra_css:
+  - _css/styles.css
 extra:
   extraValueOne: 1
   extraValueTwo: two
@@ -34,4 +37,7 @@ nav:
     - Frontmatter: frontmatter.md
     - MkDocs file: mkdocs-file.md
     - External YAML files: external-yaml-files.md 
+ - Display YAML content: 
+    - Rows in a table: rows-table.md
+    - Using macros: import-macro.md
     
