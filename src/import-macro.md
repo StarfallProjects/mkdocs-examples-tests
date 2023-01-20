@@ -56,6 +56,11 @@ Import the macro and iterate over the YAML:
 
 Refer to the [Jinja2 Import documentation](https://jinja.palletsprojects.com/en/3.1.x/templates/#import) for more information about `import`.
 
+!!! tip "Nunjucks and Jinja2"
+    The Jinja2 documentation is sometimes hard to browse. Nunjucks is a JavaScript port of Jinja2. The documentation contents are similar, but better presented, and occasionally contain more detail. [Nunjucks Templating docs](https://mozilla.github.io/nunjucks/templating.html). 
+
+    You can also search for solutions in either templating language if you're looking for examples of how to do something.
+
 ### Output
 
 {% import "_macros/pretty-list.html" as list %}
