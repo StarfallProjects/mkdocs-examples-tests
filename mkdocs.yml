@@ -23,7 +23,7 @@ plugins:
         - _yaml/simple-example.yml
         - _yaml/large-example.yml
 extra_css:
-  - _css/styles.css
+  - css/styles.css
 extra:
   extraValueOne: 1
   extraValueTwo: two
