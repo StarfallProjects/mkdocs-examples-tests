@@ -1,8 +1,6 @@
 # Macros for templating
 
-If you need reusable page structure, you usually use a template. For example, a template allows you to create a single layout, then apply it to all blog pages.
-
-Macros are useful when you don't want to create a whole new page layout template, but you still want reusable styling, structure, and so on.
+Macros are useful when you want reusable styling, structure, and so on.
 
 ## Example: Use a macro and YAML file to generate a custom-styled list
 
