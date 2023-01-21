@@ -434,6 +434,26 @@
     Example: Include a YAML file from an external URL
   </a>
   
+    <nav class="md-nav" aria-label="Example: Include a YAML file from an external URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -574,6 +594,26 @@
     Example: Include a YAML file from an external URL
   </a>
   
+    <nav class="md-nav" aria-label="Example: Include a YAML file from an external URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -625,7 +665,45 @@
 <li>Simple YAML 2: two</li>
 </ul>
 <h2 id="example-include-a-yaml-file-from-an-external-url">Example: Include a YAML file from an external URL</h2>
-<p>Wouldn't it be cool to be able to pull in a YAML file from outside the project? Yes. Can you do it? No / not easily (I'm exploring using <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/">modules</a> for it).</p>
+<p>You can load YAML from files hosted outside your project using <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/">modules</a>.</p>
+<p>This example loads an OpenAPI example, <a href="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml">petstore.yaml</a>.</p>
+<h3 id="code_1">Code</h3>
+<p>Create a file, <code>main.py</code>, at the root of your project:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">yaml</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">define_env</span><span class="p">(</span><span class="n">env</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml&#39;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="n">content</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;_yaml/petstore.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;_yaml/petstore.yaml&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">petstore</span><span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;petstore&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">petstore</span><span class="p">)</span>
+</code></pre></div>
+<p>Access the petstore YAML in your Markdown:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gs">**Petstore version:**</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{{ petstore.info.version }}
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="gs">**Summary of the `/pets` endpoint `get` operation:**</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>{{ petstore.paths[&#39;/pets&#39;][&#39;get&#39;].summary }}
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="gs">**Summary of the `/pets` endpoint `post` operation:**</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>{{ petstore.paths[&#39;/pets&#39;].post.summary }}
+</code></pre></div>
+<h3 id="output_1">Output</h3>
+<p><strong>Petstore version:</strong></p>
+<p>1.0.0</p>
+<p><strong>Summary of the <code>/pets</code> endpoint <code>get</code> operation:</strong></p>
+<p>List all pets</p>
+<p><strong>Summary of the <code>/pets</code> endpoint <code>post</code> operation:</strong></p>
+<p>Create a pet</p>
+<div class="admonition note">
+<p class="admonition-title">Special characters and keywords</p>
+<p>You need to wrap your YAML keys in <code>['']</code> if you YAML key:</p>
+<ul>
+<li>Starts with a special character, such as <code>/</code></li>
+<li>Clashes with an operation, such as <code>dict.get()</code></li>
+</ul>
+</div>
 
 
 

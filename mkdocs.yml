@@ -37,7 +37,7 @@ nav:
  - YAML sources:
     - Frontmatter: frontmatter.md
     - MkDocs file: mkdocs-file.md
-    - External YAML files: external-yaml-files.md 
+    - External YAML files: external-yaml-files.md
  - Display YAML content: 
     - Rows in a table: rows-table.md
     - Using macros: import-macro.md
