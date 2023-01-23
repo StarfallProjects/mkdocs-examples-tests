@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/clashing-code/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/clone-run/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/external-yaml-files/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/frontmatter/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/import-macro/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/macros-info/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/mkdocs-file/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2023-01-21</lastmod>
+         <loc>https://starfallprojects.github.io/mkdocs-macros-yaml-examples/rows-table/</loc>
+         <lastmod>2023-01-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
