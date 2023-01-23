@@ -1,6 +1,7 @@
 site_name: MkDocs Macros YAML Examples
 site_description: An example site to demo using mkdocs-macros-plugin with YAML to generate content.
 site_author: Deborah Barnard
+site_url: https://starfallprojects.github.io/mkdocs-macros-yaml-examples/
 repo_url: https://github.com/StarfallProjects/mkdocs-macros-yaml-examples
 docs_dir: src
 site_dir: docs
