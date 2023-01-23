@@ -1,6 +1,6 @@
 # As rows in a table
 
-This example uses the YAML in `_yaml/large-example.yml`. Refer to [External YAML files](/external-yaml-files) for guidance on including YAML files.
+This example uses the YAML in `_yaml/large-example.yml`. Refer to [External YAML files](external-yaml-files.md) for guidance on including YAML files.
 
 ### Code
 

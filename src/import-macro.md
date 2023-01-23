@@ -4,7 +4,7 @@ Macros are useful when you want reusable styling, structure, and so on.
 
 ## Example: Use a macro and YAML file to generate a custom-styled list
 
-This example uses the YAML in `_yaml/large-example.yml`. Refer to [External YAML files](/external-yaml-files) for guidance on including YAML files.
+This example uses the YAML in `_yaml/large-example.yml`. Refer to [External YAML files](external-yaml-files.md) for guidance on including YAML files.
 
 ### Code
 
