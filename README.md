@@ -1,14 +1,18 @@
-# mkdocs-macros-yaml-examples
+# MkDocs Examples and Tests
 
-_An example site to demo using [mkdocs-macros-plugin](https://github.com/fralau/mkdocs_macros_plugin) with YAML to generate content._
+_An example site to test out various MkDocs features, mostly with the Material theme._
 
-[Browse the examples](https://starfallprojects.github.io/mkdocs-macros-yaml-examples/)
+Each test or demo is on its own branch.
+
+## mkdocs-macros-plugin
+
+**Branch**: `yaml-plugin-demo`
 
 mkdocs-macros-plugin allows you to use variables and macros in your MkDocs sites. It's a powerful tool, and I recommend reading the [mkdocs-macros documentation](https://mkdocs-macros-plugin.readthedocs.io/en/latest/) to learn more about it.
 
-This repo focuses on one task: using YAML to define variables that you can then use in your site. This can range from pulling in something from your `mkdocs.yml` and displaying it in your content, to using extra YAML files to generate page contents.
+This branch focuses on one task: using YAML to define variables that you can then use in your site. This can range from pulling in something from your `mkdocs.yml` and displaying it in your content, to using extra YAML files to generate page contents.
 
-## Run the examples
+### Run the examples
 
 You need:
 
@@ -17,11 +21,13 @@ You need:
 
 ```sh
 git clone https://github.com/StarfallProjects/mkdocs-macros-yaml-examples.git
-cd mkdocs-macros-yaml-examples
+cd mkdocs-examples-tests
 # Create a virtual environment https://docs.python.org/3/library/venv.html
 python -m venv venv
 # Active your virtual environment
 ./venv/Scripts/<script-for-your-system>
+# Check out the branch
+git checkout yaml-plugin-demo
 # Install requirements
 pip install -r requirements.txt
 # Build and serve locally

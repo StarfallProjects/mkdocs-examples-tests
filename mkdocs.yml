@@ -1,45 +1,10 @@
-site_name: MkDocs Macros YAML Examples
-site_description: An example site to demo using mkdocs-macros-plugin with YAML to generate content.
+site_name: MkDocs Examples and Tests
+site_description: An example site to test out MkDocs and the Material theme.
 site_author: Deborah Barnard
-site_url: https://starfallprojects.github.io/mkdocs-macros-yaml-examples/
-repo_url: https://github.com/StarfallProjects/mkdocs-macros-yaml-examples
-docs_dir: src
-site_dir: docs
+site_url: https://starfallprojects.github.io/mkdocs-examples-tests/
+repo_url: https://github.com/StarfallProjects/mkdocs-examples-tests
 theme:
   name: material
-  features:
-    - navigation.sections
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-plugins:
-  - search
-  # Enable https://github.com/fralau/mkdocs_macros_plugin
-  - macros:
-      include_yaml:
-        - _yaml/simple-example.yml
-        - _yaml/large-example.yml
-extra_css:
-  - css/styles.css
-extra:
-  extraValueOne: 1
-  extraValueTwo: two
 nav:
  - Home: index.md
- - Setup:
-    - Clone and run: clone-run.md
-    - Avoid clashing with code examples: clashing-code.md
-    - List available variables: macros-info.md
- - YAML sources:
-    - Frontmatter: frontmatter.md
-    - MkDocs file: mkdocs-file.md
-    - External YAML files: external-yaml-files.md
- - Display YAML content: 
-    - Rows in a table: rows-table.md
-    - Using macros: import-macro.md
     
